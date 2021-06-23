@@ -47,6 +47,23 @@ $ docker-compose exec php-fpm php artisan migrate:fresh --seed
 ```
 Se tudo correr bem seu ambiente estará rodando em: `http://localhost:14000`
 
+### Instalação normal (PHP + Composer)
+
+Para instalar usando apenas o PHP, primeiro instale as dependências:
+```bash
+composer install
+```
+
+Em seguida faça a configuração para seu banco de dados no `.env` e faça as migrações:
+```bash
+$ php artisan migrate:fresh --seed
+```
+
+Depois basta subir o servidor
+```bash
+$ php artisan serve 
+```
+Se tudo correr bem seu ambiente estará rodando em: `http://localhost:8000`
 
 ## Endpoints
 
